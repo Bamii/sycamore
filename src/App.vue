@@ -44,6 +44,11 @@ const state = useListStore();
         <CreateCustomer v-if="state.mode == Mode.Create" :toggleMode="() => {state.toggle_mode(Mode.List)}" />
         <CreateCustomer type="edit" :data="state.selected" v-if="state.mode == Mode.Edit" :toggleMode="() => {state.toggle_mode(Mode.List)}" />
       </div>
+      
     </div>
+      <div class="text-center px-4 py-2 text-xs">
+        i was inspired by <a class="blockw w-max px-2 mx-1 bg-orange-500 text-black" href="https://www.pinterest.com/pin/548313323405899191/"> Geoff Chambers </a>.
+       <br> sad i couldnt do the shader stuff.
+      </div>
   </main>
 </template>
