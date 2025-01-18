@@ -92,6 +92,3 @@ function delete_customer(id) {
   store.delete(id)
 }
 </script>
-
-<style scoped>
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex overflow-auto py-2 px-4" _v-if="store.filters.size !== 0">
+  <div class="flex overflow-auto py-2 px-4" v-if="store.filters.size !== 0">
     <div class="whitespace-nowrap mr-4"> filters > </div>
     <div class="flex items-center space-x-4">
       <div class="whitespace-nowrap" v-bind:key="filter" v-for="filter in store.filters">

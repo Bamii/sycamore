@@ -85,8 +85,6 @@ import Quill from './QuillComponent.vue'
 import IForm from './IForm.vue'
 import {useCRUDStore} from '../stores/crud.ts'
 import {useListStore} from '../stores/cslist.ts'
-// import Editor from './TipTap.vue'
-// import { type Customer } from '../types'
 
 const props = defineProps({
   toggleMode: Function,

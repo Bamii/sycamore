@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue"
 import CustomerList from './components/CustomerList.vue'
 import CreateCustomer from './components/CreateCustomer.vue'
 import { Mode } from './types.ts'

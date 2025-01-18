@@ -11,20 +11,20 @@ export const useCRUDStore = defineStore('counter', () => {
     phone_number: '08073716585',
     state: 'Lagos',
     active: true,
-    details: "something fus=hy",
+    details: "something fishy",
     created_at: Date.now()
   }]);
   
-  const filters
-    = ref(new Map());
+  const filters = ref<Map<string, string | number | boolean>>(new Map());
   
   const filtered = computed(() => {
     return customers.value
       .filter((customer: Customer) => {
         const entries = filters.value.entries()
         let entry = entries.next();
+        
         while (!entry.done) {
-          const [key, { value }] = entry.value;
+          const [key, value] = entry.value;
           if(!process_filter(key, customer[key]!, value)) {
             return false;
           }
@@ -78,9 +78,12 @@ export const useCRUDStore = defineStore('counter', () => {
   }
   
   function ddelete(id: string) {
-    console.log(id)
     customers.value = customers.value.filter(e => e.id !== id)
   }
 
-  return { customers, search, filter: search, filters, filtered, create, update, delete: ddelete, unsearch }
+  return { 
+    customers, search, filter: search, 
+    filters, filtered, create, update, 
+    delete: ddelete, unsearch
+  }
 })
